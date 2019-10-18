@@ -1,0 +1,9 @@
+[Unit]
+Description=Set up system
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bootstrap
+
+[Install]
+WantedBy=multi-user.target
