@@ -21,5 +21,5 @@ run:
 	sudo podman stop -a
 	sudo podman container prune
 	sudo podman run -d -p :53/tcp -p :53/udp --name=cont-fedora-mailserver-dns --network mailservers-network-dns --cap-add=CAP_NET_ADMIN -t fedora-mailserver-dns
-	sudo podman run -d --hostname=tom.first-domain.com -p :53/tcp -p :53/udp -p :25 --name=cont-fedora-mailserver-tom --network mailservers-network-toms-domain --cap-add=CAP_NET_ADMIN -t fedora-mailserver-tom
-	sudo podman run -d --hostname=jerry.second-domain.com -p :53/tcp -p :53/udp -p :25 --name=cont-fedora-mailserver-jerry --network mailservers-network-jerrys-domain --cap-add=CAP_NET_ADMIN -t fedora-mailserver-jerry
+	sudo podman run -d --hostname=tom.first-domain.com -p :53/tcp -p :53/udp -p :25 -p :8891 --name=cont-fedora-mailserver-tom --network mailservers-network-toms-domain --cap-add=CAP_NET_ADMIN -t fedora-mailserver-tom
+	sudo podman run -d --hostname=jerry.second-domain.com -p :53/tcp -p :53/udp -p :25 -p :8891 --name=cont-fedora-mailserver-jerry --network mailservers-network-jerrys-domain --cap-add=CAP_NET_ADMIN -t fedora-mailserver-jerry

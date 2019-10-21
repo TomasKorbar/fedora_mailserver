@@ -1,0 +1,2 @@
+2019._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTacPGZgA//z8b3G39QReIK8bl/Abi9OixbnKBYLFsm3PJ/P68Iw4OMuELOQscz/C/aInTWMwE/T4CkRUxQKKJKTt7Vhi05yuWAPMrXJwratMH372X2I40ZuDmK+rqkN9Potm+0BP6aalzRVi1UmFHdyxwwQhTsGBfufRS73tj/wIDAQAB" )  ; ----- DKIM key 2019 for first-domain.com

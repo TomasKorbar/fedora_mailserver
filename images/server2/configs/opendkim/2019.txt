@@ -1,0 +1,2 @@
+2019._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDGLSPasqWXX3b9a5JEj42Tu57dmIuAhAcSAckIyz6DBRJH6QfU97f32/cC9IqynIBx3w1FeYOiqkDXaXDFrN9MnkmKgVvan7Lq9AWikjUSnIggIUe0gV2+GEtLA6h/VMAqh00JlcAGxg40X+Cu9lIjzhG5fex3i6l8Bs4RHOo0VwIDAQAB" )  ; ----- DKIM key 2019 for second-domain.com
