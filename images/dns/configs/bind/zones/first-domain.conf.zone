@@ -1,0 +1,18 @@
+$TTL  3600
+@      IN SOA  first-domain.com. root.first-domain.com. (
+                 1571655122           ; Serial number of zone file
+                 1200     ; Refresh time
+                 180       ; Retry time in case of problem
+                 1209600      ; Expiry time
+                 10800 ) ; Maximum caching time in case of failed lookups
+;
+       IN NS     ns1.first-domain.com.
+       IN NS     ns2.first-domain.com.
+       IN A      192.168.2.8
+;
+ns1    IN A      192.168.2.8
+ns2    IN A      192.168.2.8
+@      IN MX 10  tom.first-domain.com.
+*      IN A      192.168.2.8
+2019._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTacPGZgA//z8b3G39QReIK8bl/Abi9OixbnKBYLFsm3PJ/P68Iw4OMuELOQscz/C/aInTWMwE/T4CkRUxQKKJKTt7Vhi05yuWAPMrXJwratMH372X2I40ZuDmK+rqkN9Potm+0BP6aalzRVi1UmFHdyxwwQhTsGBfufRS73tj/wIDAQAB" )  ; ----- DKIM key 2019 for first-domain.com

@@ -1,0 +1,15 @@
+$TTL  3600
+@      IN SOA  jerry.second-domain.com. root.jerry.second-domain.com. (
+                 1571658277           ; Serial number of zone file
+                 1200     ; Refresh time
+                 180       ; Retry time in case of problem
+                 1209600      ; Expiry time
+                 10800 ) ; Maximum caching time in case of failed lookups
+;
+       IN NS     ns1.jerry.second-domain.com.
+       IN NS     ns2.jerry.second-domain.com.
+       IN A      192.168.2.18
+;
+ns1    IN A      192.168.2.18
+ns2    IN A      192.168.2.18
+*      IN A      192.168.2.18

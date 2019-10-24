@@ -1,0 +1,15 @@
+$TTL  3600
+@      IN SOA  tom.first-domain.com. root.tom.first-domain.com. (
+                 1571658276           ; Serial number of zone file
+                 1200     ; Refresh time
+                 180       ; Retry time in case of problem
+                 1209600      ; Expiry time
+                 10800 ) ; Maximum caching time in case of failed lookups
+;
+       IN NS     ns1.tom.first-domain.com.
+       IN NS     ns2.tom.first-domain.com.
+       IN A      192.168.2.10
+;
+ns1    IN A      192.168.2.10
+ns2    IN A      192.168.2.10
+*      IN A      192.168.2.10

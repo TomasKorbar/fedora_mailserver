@@ -16,11 +16,12 @@ ADD /images/server1/configs/opendkim/opendkim.conf /etc/opendkim.conf
 
 RUN echo 'export MAIL=$HOME/Maildir' >> /etc/profile.d/mail.sh
 RUN echo "2019._domainkey.first-domain.com first-domain.com:2019:/etc/opendkim/keys/first-domain.com/2019.private" > /etc/opendkim/KeyTable
-RUN echo "*@first-domain.com 2019._domainkey.first-domain.com" > /etc/opendkim/SigningTable
+RUN printf "*@first-domain.com 2019._domainkey.first-domain.com\n*@tom.first-domain.com 2019._domainkey.first-domain.com\n" > /etc/opendkim/SigningTable
 
 RUN mkdir -p /etc/opendkim/keys/first-domain.com
 COPY ./images/server1/configs/opendkim/2019.private /etc/opendkim/keys/first-domain.com/2019.private
 RUN chown opendkim:opendkim /etc/opendkim/keys/first-domain.com/2019.private
+RUN chmod 600 /etc/opendkim/keys/first-domain.com/2019.private
 
 EXPOSE 25
 EXPOSE 143
