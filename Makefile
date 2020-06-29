@@ -1,5 +1,3 @@
-all: build network run iptables_rules
-
 build:
 	sudo podman build -f ./images/server1/Dockerfile -t fedora-mailserver-tom .
 	sudo podman build -f ./images/server2/Dockerfile -t fedora-mailserver-jerry .
