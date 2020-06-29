@@ -1,4 +1,4 @@
-FROM fedora:30
+FROM fedora:rawhide
 
 RUN dnf install -y postfix iproute iputils bind-utils telnet dovecot passwd opendkim perl-Getopt-Long;
 
