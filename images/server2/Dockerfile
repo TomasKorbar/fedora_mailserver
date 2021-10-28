@@ -13,6 +13,8 @@ RUN systemctl enable bootstrap;
 
 ADD /images/server2/configs/postfix/main.cf /etc/postfix/main.cf
 ADD /images/server2/configs/opendkim/opendkim.conf /etc/opendkim.conf
+ADD /images/server2/configs/dovecot/conf.d/* /etc/dovecot/conf.d
+ADD /images/server2/configs/dovecot/dovecot.conf /etc/dovecot/dovecot.conf
 
 RUN echo "export MAIL=$HOME/Maildir" >> /etc/profile.d/mail.sh
 RUN echo "2019._domainkey.second-domain.com second-domain.com:2019:/etc/opendkim/keys/second-domain.com/2019.private" > /etc/opendkim/KeyTable

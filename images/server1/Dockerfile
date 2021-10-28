@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 
-RUN dnf install -y postfix iproute iputils bind-utils telnet dovecot passwd opendkim perl-Getopt-Long;
+RUN dnf install -y postfix iproute iputils bind-utils telnet dovecot passwd opendkim perl-Getopt-Long gdb gcc;
 
 RUN systemctl enable postfix;
 RUN systemctl enable dovecot;
