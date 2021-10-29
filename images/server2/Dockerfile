@@ -16,6 +16,9 @@ ADD /images/server2/configs/opendkim/opendkim.conf /etc/opendkim.conf
 ADD /images/server2/configs/dovecot/conf.d/* /etc/dovecot/conf.d
 ADD /images/server2/configs/dovecot/dovecot.conf /etc/dovecot/dovecot.conf
 
+ADD /images/server2/configs/dov_certs/server_cert.pem /server_cert.pem
+ADD /images/server2/configs/dov_certs/server_key.pem  /server_key.pem
+
 RUN echo "export MAIL=$HOME/Maildir" >> /etc/profile.d/mail.sh
 RUN echo "2019._domainkey.second-domain.com second-domain.com:2019:/etc/opendkim/keys/second-domain.com/2019.private" > /etc/opendkim/KeyTable
 RUN printf "*@second-domain.com 2019._domainkey.second-domain.com\n*@jerry.second-domain.com 2019._domainkey.second-domain.com\n" > /etc/opendkim/SigningTable
@@ -28,5 +31,6 @@ RUN chmod 600 /etc/opendkim/keys/second-domain.com/2019.private
 EXPOSE 25
 EXPOSE 143
 EXPOSE 110
+EXPOSE 995
 
 CMD [ "/sbin/init" ]
